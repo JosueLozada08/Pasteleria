@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff7f3;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    background-color: #f8c3c3;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ffc1cc;
+    padding: 10px;
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ff7b89;
+    border-radius: 10px;
+}
+
+.nav a:hover {
+    background-color: #ff5177;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #ff6f61;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #ff7b89;
+    outline: none;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.form-actions button {
+    background-color: #ff7b89;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    background-color: #ff5177;
+}
+
+.form-actions a {
+    color: #ff7b89;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.form-actions a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para la alerta de éxito */
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo específico para las alertas de éxito */
+.alert-succes {
+    background-color: #dff0d8; /* Verde claro */
+    color: #3c763d;           /* Verde oscuro para el texto */
+    border: 1px solid #d6e9c6;
+}
+
+/* Para mejorar la apariencia del texto en caso de éxito */
+.alert-succes strong {
+    font-weight: bold;
+}
