@@ -64,3 +64,114 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+# Pastelería Web App
+
+¡Bienvenido a la aplicación web de **Pastelería**! Esta aplicación permite gestionar los pasteles de una pastelería, incluyendo la creación, edición y eliminación de registros de pasteles. El proyecto está desarrollado en **Laravel**.
+
+## Características
+
+- Crear, leer, actualizar y eliminar (CRUD) pasteles.
+- Buscar pasteles por nombre o ID para eliminarlos.
+- Interfaz amigable y responsive, utilizando HTML y CSS.
+- Uso de modales para la actualización de datos.
+- Validación de formularios para garantizar que los datos ingresados sean correctos.
+
+## Tecnologías Utilizadas
+
+- **Laravel**: Framework de PHP para la construcción de aplicaciones web.
+- **MySQL**: Base de datos utilizada para almacenar los datos de los pasteles.
+- **Bootstrap**: Framework CSS para el diseño y la responsividad.
+- **JavaScript**: Para el manejo de eventos como los modales.
+- **Composer**: Para la gestión de dependencias de PHP.
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local:
+
+    ```bash
+    git clone https://github.com/tu_usuario/pasteleria.git
+    ```
+
+2. Instala las dependencias de PHP:
+
+    ```bash
+    composer install
+    ```
+
+3. Crea una copia del archivo `.env.example` y renómbrala a `.env`:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+4. Genera una clave de aplicación en Laravel:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. Configura tu base de datos en el archivo `.env` con los detalles correctos (nombre de la base de datos, usuario y contraseña).
+
+6. Migra las tablas a tu base de datos:
+
+    ```bash
+    php artisan migrate
+    ```
+
+7. Inicia el servidor de desarrollo de Laravel:
+
+    ```bash
+    php artisan serve
+    ```
+
+8. Accede a la aplicación en tu navegador web en:
+
+    ```
+    http://localhost:8000
+    ```
+
+## Uso
+
+### Crear un pastel
+
+1. Dirígete a la sección "Crear" desde el menú de navegación.
+2. Completa el formulario con los detalles del pastel (nombre, descripción, sabor, decoración, ingredientes, precio, calorías).
+3. Haz clic en "Guardar" para almacenar el pastel en la base de datos.
+
+### Leer los pasteles
+
+1. Accede a la sección "Leer" desde el menú de navegación.
+2. Verás una lista con todos los pasteles registrados, incluyendo detalles como el nombre, sabor y precio.
+3. Puedes hacer clic en "Editar" para modificar cualquier registro de pastel.
+
+### Eliminar un pastel
+
+1. Ve a la sección "Borrar" desde el menú de navegación.
+2. Busca un pastel por nombre o ID, y elimina el registro seleccionado.
+
+## Estructura del Proyecto
+
+- **/app**: Contiene el código de la aplicación, incluyendo los controladores y modelos.
+- **/resources**: Archivos de vistas Blade y recursos frontend.
+- **/routes**: Definición de rutas para la aplicación.
+- **/database**: Migraciones y archivos relacionados con la base de datos.
+- **/public**: Contiene los archivos accesibles públicamente, como los assets.
+
+## Contribuir
+
+Si deseas contribuir a este proyecto:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Realiza tus cambios y haz un commit (`git commit -m 'Añadir nueva característica'`).
+4. Haz push a tu rama (`git push origin feature/nueva-caracteristica`).
+5. Crea un Pull Request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Para más información, revisa el archivo `LICENSE`.
+
