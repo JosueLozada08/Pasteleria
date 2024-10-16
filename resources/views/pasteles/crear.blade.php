@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Crear Pastel</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
@@ -10,13 +12,13 @@
 <body>
 
     <div class="header">
-        <h1>Pastelería Dulce Sabor</h1>
+        <h1>Crear Nuevo Pastel</h1>
     </div>
 
     <div class="nav">
-        <a class="nav-link active" aria-current="page" href="/persona/crear">Crear</a>
-        <a class="nav-link" href="/persona/leer">Leer</a>
-        <a class="nav-link" href="/persona/borrar">Borrar</a>
+        <a class="nav-link active" aria-current="page" href="/pasteles/crear">Crear</a>
+        <a class="nav-link" href="/pasteles/leer">Leer</a>
+        <a class="nav-link" href="/pasteles/borrar">Borrar</a>
     </div>
 
     <div class="container">
