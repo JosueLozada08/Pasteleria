@@ -27,8 +27,14 @@ Route::post('/pasteles/bank', [PastelesController::class, 'store'])->name('paste
 // Ruta para leer las personas
 Route::get('/pasteles/leer', [PastelesController::class, 'leer'])->name('pasteles.leer');
 
-// Ruta para actualizar una pasteles
-Route::put('/pasteles/{pasteles}', [PastelesController::class, 'update'])->name('pasteles.update');
+// Ruta para actualizar un pastel
+Route::put('/pasteles/{pastel}', [PastelesController::class, 'update'])->name('pasteles.update');
+
+
+
+Route::put('/pasteles/eliminar', [PastelesController::class, 'eliminar'])->name('pasteles.eliminar');
+
+
 
 // Ruta para eliminar una pasteles
 Route::delete('/pasteles/{id}', [PastelesController::class, 'destroy'])->name('pasteles.destroy');

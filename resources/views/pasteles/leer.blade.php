@@ -6,8 +6,11 @@
     <title>Lista de Pasteles</title>
     <link rel="stylesheet" href="{{ asset('css/leer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <!-- Incluimos Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Incluimos Bootstrap JS al final del body -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
 
@@ -25,7 +28,7 @@
         @if($pasteles->isEmpty())
             <p>No hay pasteles creados aún.</p>
         @else
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -51,7 +54,7 @@
                         <td>
                             <!-- Botón para abrir el modal de actualización -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal{{ $pastel->id }}">
-                            <i class="bi bi-pencil"></i> Editar
+                                <i class="bi bi-pencil"></i> Editar
                             </button>
 
                             <!-- Inclusión del modal -->
@@ -71,5 +74,7 @@
         @endif
     </div>
 
+    <!-- Incluimos Bootstrap JS al final del body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
