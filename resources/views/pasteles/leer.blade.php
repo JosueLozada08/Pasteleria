@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Pasteles</title>
-    <link rel="stylesheet" href="{{ asset('css/leer.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/leer.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <!-- Incluimos Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +23,7 @@
     <div class="nav">
         <a class="nav-link active" aria-current="page" href="/pasteles/crear">Crear</a>
         <a class="nav-link" href="/pasteles/leer">Leer</a>
-        <a class="nav-link" href="/pasteles/borrar">Borrar</a>
+        <a class="nav-link" href="/pasteles/eliminar">Borrar</a>
     </div>
 
     <div class="container">

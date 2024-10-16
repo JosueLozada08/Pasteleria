@@ -1,67 +1,129 @@
-/* Estilo general */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fef6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilo del encabezado */
 .header {
-    background-color: #ffb6c1;
+    background-color: #f8bfbf;
     padding: 20px;
     text-align: center;
-    color: white;
-    box-shadow: 0 4px 2px -2px gray;
-    border-bottom: 4px solid #ff6f61;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .header h1 {
     margin: 0;
+    color: #fff;
     font-size: 2.5rem;
-    font-weight: bold;
 }
 
 /* Navegación */
 .nav {
     display: flex;
     justify-content: center;
-    background-color: #ff7b89;
-    padding: 15px;
+    margin-bottom: 40px;
 }
 
-.nav-link {
-    margin: 0 10px;
+.nav a {
+    margin: 0 15px;
+    padding: 10px 20px;
     text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    padding: 10px 25px;
-    background-color: #ff6f61;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-link.active {
-    background-color: #ff5177;
-    transform: scale(1.05); /* Pequeño aumento en el tamaño del botón activo */
-}
-
-.nav-link:hover {
-    background-color: #ff5177;
-    transform: scale(1.05);
-}
-
-.nav-link.inactive {
-    background-color: #ff8a96;
-}
-
-/* Contenedor */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
+    background-color: #ff8fa3;
+    color: #fff;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
+.nav a:hover {
+    background-color: #ff5a75;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los títulos */
+h2 {
+    text-align: center;
+    color: #ff5a75;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #ff5a75;
+    outline: none;
+}
+
+/* Estilo de los botones */
+.form-actions {
+    text-align: center;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    background-color: #ff5a75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button:hover {
+    background-color: #ff294f;
+}
+
+/* Estilo de la alerta de éxito */
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}

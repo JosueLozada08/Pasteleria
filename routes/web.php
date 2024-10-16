@@ -32,9 +32,13 @@ Route::put('/pasteles/{pastel}', [PastelesController::class, 'update'])->name('p
 
 
 
-Route::put('/pasteles/eliminar', [PastelesController::class, 'eliminar'])->name('pasteles.eliminar');
+// Ruta para mostrar el formulario de búsqueda y eliminar pasteles
+Route::get('/pasteles/eliminar', [PastelesController::class, 'eliminar'])->name('pasteles.eliminar');
 
+// Ruta para buscar los pasteles por nombre o ID
+Route::get('/pasteles/search', [PastelesController::class, 'search'])->name('pasteles.search');
 
-
-// Ruta para eliminar una pasteles
+// Ruta para eliminar el pastel
 Route::delete('/pasteles/{id}', [PastelesController::class, 'destroy'])->name('pasteles.destroy');
+
+

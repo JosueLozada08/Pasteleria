@@ -76,52 +76,39 @@ class PastelesController extends Controller
         return redirect()->back()->with('success', 'Pastel actualizado correctamente.');
     }
     
-    public function eliminar()
-    {
-        
-        $pasteles = Pastel::all(); 
-    
-     
-        return view('persona.borrar', compact('personas')); 
-    }
+   public function eliminar()
+{
+    // Mostramos el formulario de búsqueda
+    return view('pasteles.eliminar');
+}
 
+public function search(Request $request)
+{
+    // Obtener el término de búsqueda (nombre o ID)
+    $searchTerm = $request->input('search');
 
-    public function destroy($id)
-    {
-        // Buscar la persona por ID
-        $pastel = Pastel::find($id);
-        
-        // Verificar si la persona existe
-        if ($pastel) {
-            $pastel->delete(); // Eliminar la persona
-            // Redirigir a la página de creación con un mensaje de éxito
-            return redirect()->route('pasteles.crear')->with('success', 'Persona borrada correctamente.');
-        } else {
-            // Redirigir a la página de creación con un mensaje de error si no se encontró la persona
-            return redirect()->route('pasteles.crear')->with('error', 'La persona no se encontró.');
-        }
+    // Buscar pasteles que coincidan con el ID o el nombre
+    $pasteles = Pastel::where('id', $searchTerm)
+                    ->orWhere('nombre', 'like', "%{$searchTerm}%")
+                    ->get();
+
+    // Si se encuentran resultados, los mostramos en la vista
+    return view('pasteles.eliminar', compact('pasteles'));
+}
+
+public function destroy($id)
+{
+    // Buscar el pastel por ID
+    $pastel = Pastel::find($id);
+    
+    if ($pastel) {
+        $pastel->delete(); // Eliminar el pastel
+        return redirect()->route('pasteles.eliminar')->with('success', 'Pastel eliminado correctamente.');
+    } else {
+        return redirect()->route('pasteles.eliminar')->with('error', 'Pastel no encontrado.');
     }
-    
-        
-    
-        public function search(Request $request)
-        {
-            // Obtener el término de búsqueda (nombre o ID)
-            $searchTerm = $request->input('search');
-        
-            // Buscar la persona por ID o Nombre
-            $pastel = Pastel::where('id', $searchTerm)
-                        ->orWhere('nombre', 'like', "%{$searchTerm}%")
-                        ->first();
-        
-            // Si se encuentra la persona, devolver la vista con los datos
-            if ($pastel) {
-                return view('persona.borrar', compact('persona'));
-            } else {
-                // Si no se encuentra, devolver con un mensaje de error
-                return redirect()->back()->with('error', 'Persona no encontrada.');
-            }
-        }
+}
+
 
 
 }

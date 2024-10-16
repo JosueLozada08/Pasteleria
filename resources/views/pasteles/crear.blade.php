@@ -18,7 +18,7 @@
     <div class="nav">
         <a class="nav-link active" aria-current="page" href="/pasteles/crear">Crear</a>
         <a class="nav-link" href="/pasteles/leer">Leer</a>
-        <a class="nav-link" href="/pasteles/borrar">Borrar</a>
+        <a class="nav-link" href="/pasteles/eliminar">Borrar</a>
     </div>
 
     <div class="container">

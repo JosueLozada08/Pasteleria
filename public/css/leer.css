@@ -1,141 +1,157 @@
-/* Estilo general */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fef6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Encabezado */
 .header {
-    background-color: #ffb6c1;
+    background-color: #f8bfbf;
     padding: 20px;
     text-align: center;
-    color: white;
-    box-shadow: 0 4px 2px -2px gray;
-    border-bottom: 4px solid #ff6f61;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .header h1 {
     margin: 0;
+    color: #fff;
     font-size: 2.5rem;
-    font-weight: bold;
 }
 
 /* Navegación */
 .nav {
     display: flex;
     justify-content: center;
-    background-color: #ff7b89;
-    padding: 10px;
+    margin-bottom: 30px;
 }
 
-.nav-link {
+.nav a {
     margin: 0 10px;
+    padding: 10px 20px;
     text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    padding: 8px 20px;
-    background-color: #ff8a96;
-    border-radius: 20px;
+    background-color: #ff8fa3;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
-    background-color: #ff5177;
+.nav a:hover {
+    background-color: #ff5a75;
 }
 
-.nav-link.active {
-    background-color: #ff5177;
-}
-
-/* Contenedor */
+/* Contenedor principal */
 .container {
+    background-color: #ffffff;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Tabla de pasteles */
+/* Estilos de la tabla */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 th, td {
-    padding: 12px 15px;
+    padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #f0f0f0;
+    background-color: #f8bfbf; /* Color de fondo */
+    color: #000 !important; /* Forzar el color negro para el texto */
     font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-    font-size: 1rem;
+
+tr:hover {
+    background-color: #f1f1f1;
 }
 
 td {
-    font-size: 1rem;
-    vertical-align: middle;
+    background-color: #fff;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tr:hover {
-    background-color: #ffefef;
-    transition: background-color 0.3s ease;
-}
-
-/* Botón de actualizar */
+/* Estilo de los botones */
 .btn {
-    padding: 8px 15px;
-    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #ff8fa3;
     color: white;
-    background-color: #007bff;
+    border: none;
     border-radius: 5px;
-    font-size: 1rem;
-    text-align: center;
-    display: inline-block;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #ff5a75;
 }
 
-.btn-primary {
-    color: white;
-    background-color: #007bff;
+/* Mensajes de éxito */
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Ajustes para pantallas pequeñas */
+/* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
+    .nav {
+        flex-direction: column;
+    }
+    
+    .nav a {
+        margin-bottom: 10px;
     }
 
     table, th, td {
-        font-size: 0.9em;
+        display: block;
     }
 
-    th, td {
-        padding: 10px;
+    th {
+        background-color: #f8bfbf; /* Color de fondo */
+        color: #000 !important; /* Forzar el color negro para el texto */
+        font-weight: bold;
+    }
+    
+    
+    td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ddd;
     }
 
-    .btn {
-        font-size: 0.9em;
-        padding: 8px 10px;
+    td:before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        content: attr(data-label);
+        font-weight: bold;
     }
+
+    table th {
+    color: #000; /* Cambia el color del texto de los encabezados a negro */
+    font-weight: bold; /* Opción adicional para hacer el texto más visible */
+    background-color: #f8f9fa; /* Opción adicional para cambiar el color de fondo si lo necesitas */
+}
 }
