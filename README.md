@@ -58,11 +58,7 @@
     php artisan serve
     ```
 
-8. Accede a la aplicación en tu navegador web en:
 
-    ```
-    http://localhost:8000
-    ```
 
 ## Uso
 
