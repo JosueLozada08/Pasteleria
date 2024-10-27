@@ -73,7 +73,7 @@ class PastelesController extends Controller
         $pastel->update($validatedData);
     
         // Redirigir con un mensaje de éxito
-        return redirect()->back()->with('success', 'Pastel actualizado correctamente.');
+        return redirect()->back()->with('success', 'Pastel actualizado correctamente.')
     }
     
    public function eliminar()
